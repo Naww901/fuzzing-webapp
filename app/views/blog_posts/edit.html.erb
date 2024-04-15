@@ -1,0 +1,12 @@
+<h1 class="my-4">Editing Blog Post</h1>
+
+<%= bootstrap_form_with model: @blog_post, url: blog_post_path(@blog_post), method: :patch, data: { turbo: false } do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_area :body, rows: 16 %>
+  <%= form.submit class: 'btn btn-primary my-3' %>
+<% end %>
+
+<p>
+  <%= link_to 'Back', blog_posts_path, class: 'btn btn-outline-primary' %>
+</p>
+
