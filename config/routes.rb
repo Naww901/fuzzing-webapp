@@ -6,13 +6,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: redirect('blog_posts')
+  root to: redirect('welcome')
 
-  get 'blog_posts', to: 'blog_posts#index', as: 'blog_posts'
-  post 'blog_posts', to: 'blog_posts#create'
-  get 'blog_posts/new', to: 'blog_posts#new', as: 'new_blog_post'
-  get 'blog_posts/:id', to: 'blog_posts#show', as: 'blog_post'
-  get 'blog_posts/:id/edit', to: 'blog_posts#edit', as: 'edit_blog_post'
-  patch 'blog_posts/:id', to: 'blog_posts#update'
-  delete 'blog_posts/:id', to: 'blog_posts#destroy'
+  get 'welcome', to: 'pages#index', as: 'welcome_page'
+  post '/upload', to: 'pages#create'
+
+  get 'ror', to: 'pages#ror', as: 'ror_page'
+  get 'about', to: 'pages#about', as: 'about_page'
+  get 'fuzzing', to: 'pages#fuzzing', as: 'fuzzing_page'
+
 end

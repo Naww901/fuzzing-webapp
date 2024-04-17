@@ -1,0 +1,15 @@
+<h1 class="my-4">Welcome to the Webapp!</h1>
+
+<div class="table-responsive">
+
+  <p>This is an example of a website that uses a built-in user authentication system.</p>
+  <p>You can view all of the main pages, but there are some pages that are only accessible to the admins of the website. This website was put together using Ruby on Rails and is used to demonstrate the powers of fuzzing and how it can be used to find vulnerabilities in a website.</p>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="file" name="file_upload" accept="image/jpg, image/jpeg, image/png, image/gif, image/bmp">
+  <button type="submit">Upload</button>
+</form>
+
+</div>
+
+<%# accept="image/jpg, image/jpeg, image/png, image/gif, image/bmp" %>

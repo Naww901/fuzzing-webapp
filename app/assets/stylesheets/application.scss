@@ -25,8 +25,58 @@ label.required:after {
 
 main {
   margin-top: 20px;
+  margin-left: 370px;
+  margin-right: 270px;
 }
 
 .alert-dismissible {
   padding-left: $alert-dismissible-padding-r;
 }
+
+// Sidebar styles
+
+.sidebar {
+  width: 250px; // Set the width of the sidebar
+  position: fixed; // Fix the sidebar to the side of the window
+  top: 0; // Align the top of the sidebar with the top of the window
+  left: 0; // Align the sidebar to the left side of the window
+  height: 100vh; // Make the sidebar full height
+  background-color: #b2b2b2; // Set the background color of the sidebar
+  color: #fff; // Set the text color for the sidebar
+  overflow-y: auto; // Add scroll to the sidebar if content is longer than the screen
+  z-index: 1000; // Ensure the sidebar stacks above other content
+  // Add other styles such as padding, typography, etc.
+}
+
+.sidebar a {
+  color: #fff; // Set the link color
+  padding: 10px 15px; // Add padding to the links
+  text-decoration: none; // Remove underline from links
+  display: block; // Display links as block elements
+  &:hover {
+    background-color: #444; // Set hover background color for links
+  }
+}
+
+// You might want to style the active link differently
+.sidebar a.active {
+  background-color: #555; // Active link background color
+}
+
+// Style for sidebar headings or sections
+.sidebar .sidebar-section {
+  padding: 10px 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #474747; // Add a bottom border to each section
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; // Make sidebar full width on small screens
+    height: auto;
+    position: static; // Sidebar scrolls with the page on small screens
+  }
+}
+
+// Add any additional custom styles for your sidebar below

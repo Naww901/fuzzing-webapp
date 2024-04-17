@@ -11,17 +11,17 @@
   </head>
 
   <body>
+    <%= render 'layouts/sidebar' %>
     <div class="container text-end my-1">
     <% if user_signed_in? %>
       <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn btn-outline-primary btn-sm'  %>
     <% else %>
-      <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary btn-sm' %>
-      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-outline-primary btn-sm' %>
+      <%= link_to 'Admin Sign In', new_user_session_path, class: 'btn btn-primary btn-sm' %>
     <% end %>
     </div>
     <%= render 'shared/flash' %>
 
-    <main role="main" class="container">
+    <main role="main" class="main">
       <%= yield %>
     </main>
   </body>
